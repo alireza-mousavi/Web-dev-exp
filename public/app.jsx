@@ -17,16 +17,15 @@ var GreeterForm = React.createClass({
     e.preventDefault();
 
     var name = this.refs.name.value;
-    var message = this.refs.message.value;
-
+    var message = this.refs.LastName.value;
     var updates = {};
 
     if (name.length > 0 ) {
       this.refs.name.value = "";
       updates.name = name;
     }
-    if (message.length > 0) {
-      this.refs.message.value ='';
+    if ( message.length > 0) {
+      this.refs.LastName.value ='';
       updates.message = message;
     }
 
@@ -37,29 +36,20 @@ var GreeterForm = React.createClass({
       <div>
         <form onSubmit={this.onFormSubmit}>
           <div>
-            Name:
+            First Name:
             <input type="text" ref="name" placeholder='First Name'/>
           </div>
           <div>
+            Last Name:
             <input type="text" ref="LastName" placeholder='Last Name'/>
           </div>
           <div>
+            Email Address:
             <input type="text" ref="EmailAdd" placeholder='Email Address'/>
           </div>
           <div>
+            Postcode:
             <input type="text" ref="Postcode" placeholder='Postcode'/>
-          </div>
-          <div>
-            <input type="text" ref="nam" placeholder='Enter Name'/>
-          </div>
-          <div>
-            <input type="text" ref="nae" placeholder='Enter Name'/>
-          </div>
-          <div>
-            <input type="text" ref="ne" placeholder='Enter Name'/>
-          </div>
-          <div>
-            <textArea type="text" ref="message" placeholder='Last Name'></textArea>
           </div>
           <div>
             <button>Submit</button>
